@@ -1,0 +1,136 @@
+.main-content {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.main-content::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+.main-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: #69E13F;
+    border-radius: 10px;
+}
+
+.received-message-container {
+    display: flex;
+    align-items: end;
+    margin-left: 20px;
+}
+
+.received-message-container img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.received-message {
+    max-width: 400px;
+    background-color: #D9D9D9;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.sent-message-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    margin-right: 20px;
+}
+
+.sent-message-container img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.sent-message {
+    max-width: 400px;
+    background-color: #AFFF93;
+    padding: 10px;
+    border-radius: 10px 10px 0px 10px;
+}
+
+.white-space {
+    height: 100px;
+    width: 100%;
+}
+
+
+.send-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 75%;
+    height: 50px;
+    backdrop-filter: blur(5px);
+    padding-right: 15px;
+}
+
+.send-message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 90%;
+}
+
+#sendMessage {
+    width: 80%;
+    border: solid 1px black;
+    background-color: #D9D9D9;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.send-button {
+    height: 100%;
+    width: 10%;
+    min-width: 67px;
+    background-color: #69E13F;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 0px;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.438);
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .main-content {
+        width: 95%;
+    }
+    
+    .send-container {
+        align-items: baseline;
+        width: 100%;
+        height: 160px;
+        bottom: 0px;
+        left: 0px;
+        right: auto;
+    }
+
+    .send-message-container {
+        height: 30%;
+    }
+
+    .white-space {
+        height: 500px;
+
+    }
+}

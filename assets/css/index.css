@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+    background-color: black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("../images/arriere-plan-3.jpg");
+    background-size: cover; /* Ajuster la taille de l'image pour couvrir l'ensemble du corps */
+    background-position: center; /* Centrer l'image sur le corps */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+}
+
+a, h1 {
+    margin: 10px;
+    color: white;
+}
+
+a button {
+    width: 200px;
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    a {
+        width: 80%;
+    }
+
+    .connect-btns {
+        width: 90%;
+        max-width: 280px;
+    }
+
+}

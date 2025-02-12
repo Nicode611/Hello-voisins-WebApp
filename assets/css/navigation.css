@@ -1,0 +1,438 @@
+.mobile-display {
+    display: none;
+}
+
+.desktop-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    width: 20%;
+    height: 100vh;
+    max-width: 310px;
+    min-width: 250px;
+    background-color: black;
+    color: white;
+    z-index: 5;
+    background-image: url("../images/arriere-plan-3.jpg");
+    background-size: cover; /* Ajuster la taille de l'image pour couvrir l'ensemble du corps */
+    background-position: left; /* Centrer l'image sur le corps */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+}
+
+
+/* Fenetre modale Users */
+.popup-user {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: -700px;
+    right: 50%;
+    transform: translateX(85%);
+    height: auto;
+    width: 350px;
+    padding: 20px;
+    background-color: #F5F5F5;
+    transition: top 0.4s;
+    font-weight: 500;
+    border-radius: 10px;
+    border: solid 3px black;
+    z-index: 999;
+}
+
+.popup-user.open {
+    top: 110px;
+    transform: translateX(85%);
+    font-size: 0.8rem;
+}
+
+.popup-user::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+.popup-user::-webkit-scrollbar {
+    width: 5px;
+}
+
+.popup-user::-webkit-scrollbar-thumb {
+    background-color: #69E13F;
+    border-radius: 10px;
+}
+
+.popup-user-container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.popup-user-img {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 1px black;
+}
+
+.popup-user-container1 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 208px;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.popup-user-container1 div span {
+    margin: 0px 5px 0px 5px;
+}
+
+.popup-user-container2 {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.popup-user-container3 {
+    width: 100%;
+    text-align: center;
+}
+
+.add-contact-btn{
+    width: 50px;
+    height: 50px;
+}
+
+.add-contact-btn:hover{
+    cursor: pointer;
+    zoom: 101%;
+}
+
+
+
+.desktop-sidebar div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-img-container {
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    margin: 20px 0px 0px 0px;
+    object-fit: cover;
+}
+
+.user-img-container:hover {
+    cursor: pointer;
+}
+
+.notifications-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+.patch {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.notifications-icon:hover {
+    zoom: 103%;
+    cursor: pointer;
+}
+
+.nav-menu {
+    align-self: baseline;
+    margin-top: 50px;
+    white-space: nowrap;
+}
+
+.nav-menu ul {
+    padding-left: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu a:hover {
+    color: #69E13F;
+}
+
+.nav-menu li{
+    
+    list-style-type: none;
+    margin: 10px 0px 10px 0px;
+    font-size: 1.25rem;
+}
+
+.icons-desktop {
+    width: 35px;
+    height: 35px;
+    transform: translateY(10px);
+    margin-right: 15px;
+}
+
+.nav-menu .active {
+    color: #69E13F;
+}
+
+.session-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.session-actions form *{
+    width: 100%;
+}
+
+.session-actions > * {
+    width: 100%;
+    margin: 10px;
+}
+
+
+/* Notifications */
+.notifications-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 70px;
+    right: -500px;
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    background-color: #F5F5F5;
+    transition: right 0.4s;
+    overflow-y: auto;
+    font-weight: 500;
+    border: solid 1px black;
+    z-index: 999;
+}
+
+.notifications-container.open {
+    right: 0;
+    font-size: 0.8rem;
+}
+
+.notification-container {
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+}
+
+.notif-label {
+    align-self: baseline;
+}
+
+.notification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.notification div {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.notification img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.valid-notification-icon, .cross-notification-icon {
+    width: 35px;
+}
+
+.valid-notification-icon:hover, .cross-notification-icon:hover {
+    cursor: pointer;
+    zoom: 102%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .desktop-sidebar {
+        display: none;
+    }
+
+    .mobile-display {
+        display: flex;
+        position: relative;
+        background-color: black;
+        padding: 20px 0px 20px 0px;
+        width: 100%;
+        background-image: url("../images/arriere-plan-3.jpg");
+        background-size: cover; /* Ajuster la taille de l'image pour couvrir l'ensemble du corps */
+        background-position: top; /* Centrer l'image sur le corps */
+        background-repeat: no-repeat; /* Ne pas répéter l'image */
+    }
+
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        width: 100%;
+        margin-right: 50px;
+    }
+
+    .mobile-header div {
+        display: flex;
+        align-items: center;
+    }
+
+    .session-buttons {
+        padding: 5px;
+        background-color: #69E13F;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        box-shadow: white;
+        font-size: 0.7rem;
+        font-weight: 800;
+    }
+    
+    .session-buttons:hover, .session-buttons:hover {
+        cursor: pointer;
+        zoom: 102%;
+    }
+
+    .popup-user {
+        transform: translateX(50%);
+    }
+    
+    .popup-user.open {
+        transform: translateX(85%);
+    }
+
+    .popup-user.open {
+        transform: translateX(50%);
+    }
+
+    .user-img-container-mobile {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin: 0px 10px 0px 20px;
+        object-fit: cover;
+    }
+    
+    .user-img-container-mobile:hover {
+        cursor: pointer;
+    }
+
+    .notifications-icon-mobile {
+        align-self: baseline;
+        margin-left: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .patch {
+        position: relative;
+        top: -25px;
+        right: 8px;
+    }
+    
+    .notifications-icon-mobile:hover {
+        zoom: 103%;
+        cursor: pointer;
+    }
+
+    .mobile-navbar {
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        background-color: black;
+        height: 70px;
+        width: 100%;
+        z-index: 10;
+        background-image: url("../images/arriere-plan-3.jpg");
+    background-size: cover; /* Ajuster la taille de l'image pour couvrir l'ensemble du corps */
+    background-position: bottom; /* Centrer l'image sur le corps */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .navbar li {
+        list-style: none;
+    }
+
+    .mobile-chat-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #69E13F;
+        border-radius: 50px;
+        width: 80px;
+        height: 80px;
+        transform: translateY(-50px);
+    }
+
+    .icons-mobile {
+        width: 35px;
+        height: 35px;
+    }
+
+    .mobile-chat-icon {
+        height: 50px;
+        width: 50px;
+        transform: translateX(1px);
+    }
+
+
+}

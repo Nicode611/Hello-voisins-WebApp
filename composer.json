@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-4": {
+            "MyApp\\": "config"
+        }
+    },
+    "require": {
+        "cboden/ratchet": "^0.4",
+        "react/socket": "^1.14",
+        "react/event-loop": "^1.4",
+        "symfony/symfony": "^3.3",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

@@ -1,0 +1,59 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/arriere-plan-3.jpg");
+    background-size: cover; /* Ajuster la taille de l'image pour couvrir l'ensemble du corps */
+    background-position: center; /* Centrer l'image sur le corps */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+}
+
+.sign-in-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+    background-color: #656565;
+    color: white;
+}
+
+.format-pswd {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sign-in-form > input{
+    margin: 0px 10px 20px 10px;
+}
+
+input[type="password"], input[type="email"], input[type="text"]  {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    height: 25px;
+    width: 80%;
+}
+
+@media screen and (max-width: 1000px) {
+    .sign-in-container {
+        width: 85%;
+    }
+}

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    min-height: 90vh;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #000000;
+}
+
+button, input[type="submit"] {
+    padding: 10px;
+    background-color: #69E13F;
+    border: none;
+    border-radius: 5px;
+    box-shadow: white;
+    font-weight: 800;
+}
+
+button:hover, input[type="submit"]:hover {
+    cursor: pointer;
+    zoom: 102%;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.validation {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 3px;
+    border: solid 3px #2b8004;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    opacity: 1;
+    transition: opacity 2s ease;
+    animation: fadeOut 2s ease 2s forwards;
+    z-index: 999;
+}
+
+.error {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 3px;
+    border: solid 3px #800404;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    opacity: 1;
+    transition: opacity 2s ease;
+    animation: fadeOut 2s ease 2s forwards;
+    z-index: 999;
+}
+
+.hide {
+    display: none;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-icon {
+    height: 20px;
+    width: 20px;
+    animation: rotate 5s linear infinite;
+    z-index: 999;
+    padding: 5px 5px 5px 5px;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+}
